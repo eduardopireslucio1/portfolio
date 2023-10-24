@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;400;700&display=swap" rel="stylesheet">
+    <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#" class="nav-branding"></a>
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#knowledge" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact-me" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <section id="welcome">
+        <div id="welcome-name">
+            <h1 data-anime="400" class="fadeInDown">Hi! I'm Eduardo Pires Lucio,</h1>
+            <h2 data-anime="600" class="fadeInDown">a Full Stack developer</h2>
+        </div>
+        <div id="welcome-aboutMe">  
+            <img data-anime="800" class="fadeInDown" src="img/Eduardo4.png" alt="eduardo's picture">
+            <h2 data-anime="1000" class="fadeInDown">About me</h2>
+            <p data-anime="1200" class="fadeInDown">I'm Eduardo, a 22-year-old Full Stack developer looking for exciting challenges to boost my career. I have a degree in Systems Analysis and Development from UFMG and experience in development projects in e-commerce and business intelligence (BI), among other personal projects. I am committed, a problem solver, have great interpersonal skills, am attentive and always focus on giving my best in everything.</p>
+            <div id="container-links">
+                <a href="img/CV-Eduardo-PT.pdf" target="_blank" class="btn-welcome" data-anime="1500" class="fadeInDown">Resume - PT</a>
+                <!-- <a href="img/CV-Danilo-IT.pdf" target="_blank" class="btn-welcome" data-anime="1500" class="fadeInDown">Resume - IT</a> -->
+            </div>
+        </div>
+    </section>
+    <section id="knowledge">
+        <div id="container-knowledge">
+            <h2 data-anime="1000" class="fadeInDown">Skills</h2>
+            <ul class="container-list">
+                <li>
+                    <img src="img/html5.png" alt="Html">
+                    HTML
+                </li>
+                <li>
+                    <img src="img/css3.png" alt="CSS">
+                    CSS
+                </li>
+                <li>
+                    <img src="img/logo-javascript.png" alt="JavaScript">
+                    JavaScript
+                </li>
+                <li>
+                    <img src="img/git.png" alt="git">
+                    Git/Github
+                </li>
+                <li>
+                    <img src="img/vue.png" alt="vue">
+                    Vue
+                </li>
+                <li>
+                    <img src="img/linux.png" alt="Linux">
+                    Linux
+                </li>
+                <li>
+                    <img src="img/php.png" alt="PHP">
+                    PHP
+                </li>
+                <li>
+                    <img src="img/laravel.png" alt="Laravel">
+                    Laravel
+                </li>
+                <li>
+                    <img src="img/typescript.png" alt="Typescript">
+                    TypeScript
+                </li>
+                <li>
+                    <img src="img/node.png" alt="NodeJS">
+                    NodeJS
+                </li>
+                <li>
+                    <img src="img/redis.png" alt="Redis">
+                    Redis
+                </li>
+                <li>
+                    <img src="img/aws.png" alt="AWS">
+                    AWS
+                </li>
+                <li>
+                    <p>I can work with the basics and advanced with many tools and technologies and I'm working hard every day to learn more and be better.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    
+    <section id="projects">
+        <h2>Some Projects</h2>
+        <div id="container-projects">
+            <div class="project-unit">
+                <div class="info-bi" id="projects-info">
+                    <h3>SysAdmin - Lucio Troféus</h3>
+                    <p>SysAdmin is a system for controlling orders, customers, payments, deliveries and various types of reports.
+                        The system is currently in production for Lucio Trofeus e Brindes.</p>
+                </div>
+                <div class="imgs-bi">
+                    <img class="img-bi" src="img/luciotrofeus.png" alt="">
+                    <img class="img-bi" src="img/luciotrofeus-2.png" alt="">
+                    <img class="img-bi" src="img/luciotrofeus-3.png" alt="">
+                </div>
+            </div>
+            <hr>
+            <div class="project-unit">
+                <div class="info-bi" id="projects-info">
+                    <h3>Business Inteligence</h3>
+                    <p>A highly sophisticated Business Intelligence (BI) system that enables companies to gain valuable insights through comprehensive data analysis. This system is a versatile tool for data analysis, allowing for the evaluation of turnover, customer profiles, key performance indicators (KPIs), graphical representations in the form of maps and many other forms of analysis.</p>
+                </div>
+                <div class="imgs-bi">
+                    <img class="img-bi" src="img/dbmbi-1.png" alt="">
+                    <img class="img-bi" src="img/dbmbi-2.png" alt="">
+                    <img class="img-bi" src="img/dbmbi-3.png" alt="">
+                </div>
+            </div>
+            <hr>
+        </div>
+    </section>
+    <section id="contact-me">
+        
+        <div id="container-contact">
+            <h2>Contact me</h2>
+            <form action="https://formsubmit.co/eduardopireslucioo@gmail.com" method="POST">
+                <div>
+                    <input type="text" name="name" class="input-type1" placeholder="Your Name" required>
+                    <input type="email" name="email" class="input-type1" placeholder="Email Adress" required>
+                </div>
+                <br>
+                <textarea placeholder="Your Message" class="input-type2" name="message" rows="10" required></textarea>
+            
+                <button class="btn" type="submit">Send</button>
+            </form>
+        </div>
+        <div id="container-media" class="media">
+            <h2>Find me</h2>
+            <ul>
+                <li>
+                    <img src="img/git.png" alt="github logo"><a href="https://github.com/eduardopireslucio1" target="_blank">Github</a>
+                </li>
+                <li>
+                    <img src="img/linkedin.png" alt="linked-in logo"><a href="https://www.linkedin.com/in/eduardopireslucio/" target="_blank">Linked-In</a>
+                </li>
+                <li>
+                    <img src="img/instagram.png" alt="instagram logo"><a href="https://www.instagram.com/eduardopireslucio/" target="_blank">Instagram</a>
+                </li>
+            </ul>
+            
+        </div>
+    </section>
+    <footer>
+        <p>© 2023 <span class="name-footer">Eduardo Pires Lucio</span></p>
+    </footer>
+
+    <script src="js/simple-anime.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
