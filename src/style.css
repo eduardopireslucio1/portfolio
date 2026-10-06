@@ -955,10 +955,6 @@ h2::before {
   border-top: 0;
 }
 
-.project-head .spec div {
-  grid-template-columns: 4ch 1fr;
-}
-
 .project .did li::before {
   color: var(--orange);
 }
@@ -1089,6 +1085,48 @@ figure figcaption b {
 .shot-note::before {
   content: '// ';
   color: var(--orange);
+}
+
+.project-head .spec div {
+  grid-template-columns: 7ch 1fr;
+}
+
+.project .did-xp li::before,
+.page-projects .cases a:hover .case-name {
+  color: var(--lime);
+}
+
+.page-projects .feature-links {
+  margin-top: 28px;
+}
+
+.live.cool {
+  background: var(--blue);
+  box-shadow: 0 0 10px var(--blue);
+}
+
+/* panel + two phones, sized so the three frames come out the same height */
+.xp-row {
+  display: grid;
+  grid-template-columns: 3.4fr 1fr 1fr;
+  gap: clamp(16px, 2.5vw, 32px);
+  align-items: start;
+}
+
+.shot.phone {
+  border-radius: 14px;
+}
+
+.xp-brand {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: clamp(24px, 4vw, 56px);
+  align-items: center;
+  margin-top: clamp(24px, 4vh, 40px);
+}
+
+.gallery-two {
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .project-small {
@@ -1353,8 +1391,17 @@ figure figcaption b {
   .project-head,
   .project-small,
   .evolution,
-  .gallery {
+  .gallery,
+  .xp-brand {
     grid-template-columns: 1fr;
+  }
+
+  .xp-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .xp-row figure:first-child {
+    grid-column: 1 / -1;
   }
 
   .evolution-arrow {

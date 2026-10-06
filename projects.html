@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projects · Eduardo Pires Lucio</title>
-    <meta name="description" content="Projects by Eduardo Pires Lucio: the SysAdmin for Lucio Troféus, rebuilt, and earlier work." />
+    <meta name="description" content="Projects by Eduardo Pires Lucio: EventosXP, the SysAdmin for Lucio Troféus (rebuilt) and earlier work." />
     <meta name="theme-color" content="#030304" />
     <meta property="og:title" content="Projects · Eduardo Pires Lucio" />
-    <meta property="og:description" content="The SysAdmin for Lucio Troféus, rebuilt, and earlier work." />
+    <meta property="og:description" content="EventosXP, the SysAdmin for Lucio Troféus (rebuilt) and earlier work." />
     <meta property="og:image" content="%VITE_SITE_URL%og.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <link
@@ -47,9 +47,92 @@
           <div class="project-head">
             <div>
               <p class="kicker">
-                <span class="live warm"></span><span data-i18n="lucio.kicker">01 · refactor · 2025–26</span>
+                <span class="live"></span><span data-i18n="xpp.kicker">01 · building now · 2025–26</span>
               </p>
-              <h1 class="feature-name">SysAdmin · Lucio Troféus</h1>
+              <h3 class="feature-name">EventosXP</h3>
+              <p class="feature-pitch" data-i18n="xp.pitch">
+                A white-label platform for sports events. The organizer's brand up front, EventosXP running the operation.
+              </p>
+              <div class="feature-links">
+                <a class="feature-link" href="https://www.eventosxp.com.br/" target="_blank" rel="noopener">eventosxp.com.br ↗</a>
+                <a class="feature-link quiet" href="https://app.eventosxp.com.br/eventos" target="_blank" rel="noopener" data-i18n="xp.browse">browse events ↗</a>
+              </div>
+            </div>
+            <div>
+              <dl class="spec">
+                <div><dt>stack</dt><dd>React · TypeScript · NestJS · PostgreSQL</dd></div>
+                <div><dt data-i18n="xp.modelLabel">model</dt><dd data-i18n="xp.model">white-label · own domain · no monthly fee</dd></div>
+              </dl>
+              <ul class="did did-xp">
+                <li data-i18n="xpp.did1">A registration site per organizer, with its own brand, domain and sponsors.</li>
+                <li data-i18n="xpp.did2">Athletes find the race, register and pay by Pix or card in one flow.</li>
+                <li data-i18n="xpp.did3">One panel for registrations, check-in, results and finances.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="xp-row">
+            <figure>
+              <button class="shot" type="button" data-zoom>
+                <span class="shot-bar"><i></i><i></i><i></i><span>eventosxp · /gestao</span></span>
+                <img src="/src/assets/projects/xp-panel.webp" alt="EventosXP: organizer panel for an event" width="1100" height="700" />
+              </button>
+              <figcaption data-i18n="xpp.fig1">fig. 01 · organizer panel</figcaption>
+            </figure>
+            <figure>
+              <button class="shot phone" type="button" data-zoom>
+                <span class="shot-bar"><i></i><i></i><i></i></span>
+                <img src="/src/assets/projects/xp-athlete-event.webp" alt="EventosXP: event page on a phone" width="390" height="844" loading="lazy" />
+              </button>
+              <figcaption data-i18n="xpp.fig2">fig. 02 · event</figcaption>
+            </figure>
+            <figure>
+              <button class="shot phone" type="button" data-zoom>
+                <span class="shot-bar"><i></i><i></i><i></i></span>
+                <img src="/src/assets/projects/xp-athlete-done.webp" alt="EventosXP: registration confirmed on a phone" width="390" height="844" loading="lazy" />
+              </button>
+              <figcaption data-i18n="xpp.fig3">fig. 03 · confirmed</figcaption>
+            </figure>
+          </div>
+
+          <div class="xp-brand">
+            <figure>
+              <button class="shot" type="button" data-zoom>
+                <span class="shot-bar"><i></i><i></i><i></i><span>eventos.suamarca.com.br</span></span>
+                <img src="/src/assets/projects/xp-brand.webp" alt="EventosXP: an organizer's white-label home" width="1200" height="750" loading="lazy" />
+              </button>
+              <figcaption data-i18n="xpp.fig4">fig. 04 · white-label home</figcaption>
+            </figure>
+            <div>
+              <p class="cases-label" data-i18n="xp.cases">running live on</p>
+              <ul class="cases">
+                <li>
+                  <a href="https://inscricoes.velhooesteeventos.com/" target="_blank" rel="noopener">
+                    <span class="case-name">Velho Oeste</span>
+                    <span class="case-meta" data-i18n="xp.case1">road running · cycling · duathlon</span>
+                    <span class="case-url">inscricoes.velhooesteeventos.com ↗</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.copacianorte.com.br/" target="_blank" rel="noopener">
+                    <span class="case-name">Copa Cianorte</span>
+                    <span class="case-meta" data-i18n="xp.case2">cycling</span>
+                    <span class="case-url">copacianorte.com.br ↗</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <p class="shot-note" data-i18n="xpp.demo">product screens with demo data · “sua marca” is a placeholder brand.</p>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <div>
+              <p class="kicker">
+                <span class="live warm"></span><span data-i18n="lucio.kicker">02 · refactor · 2025–26</span>
+              </p>
+              <h3 class="feature-name">SysAdmin · Lucio Troféus</h3>
               <p class="feature-pitch" data-i18n="lucio.pitch">
                 Order management for a trophy and awards workshop, from quote to delivery.
               </p>
@@ -114,15 +197,16 @@
           <p class="shot-note" data-i18n="lucio.demo">v2 screens with demo data.</p>
         </article>
 
-        <article class="project project-small">
+        <article class="project">
+          <div class="project-small">
           <div>
-            <p class="kicker"><span class="live"></span><span data-i18n="bi.kicker">02 · grupo dbm · 2022–24</span></p>
-            <h2 class="project-title">Business Intelligence</h2>
+            <p class="kicker"><span class="live cool"></span><span data-i18n="bi.kicker">03 · grupo dbm · 2022–24</span></p>
+            <h3 class="project-title">Business Intelligence</h3>
             <p class="feature-pitch" data-i18n="bi.pitch">
               BI for DBM's clients: revenue, customer profile, churn and sales on interactive maps.
             </p>
             <dl class="spec">
-              <div><dt>stack</dt><dd>Angular · Node.js · TypeScript · PostgreSQL</dd></div>
+              <div><dt>stack</dt><dd>Vue.js · Node.js · TypeScript · PostgreSQL</dd></div>
             </dl>
           </div>
           <figure>
@@ -130,7 +214,25 @@
               <span class="shot-bar"><i></i><i></i><i></i><span>dbm · bi</span></span>
               <img src="/src/assets/projects/dbm-bi.webp" alt="DBM BI: sales map" width="1200" height="614" loading="lazy" />
             </button>
+            <figcaption data-i18n="bi.fig1">fig. 01 · sales by city</figcaption>
           </figure>
+          </div>
+          <div class="gallery gallery-two">
+            <figure>
+              <button class="shot" type="button" data-zoom>
+                <span class="shot-bar"><i></i><i></i><i></i><span>dbm · bi · /resumo</span></span>
+                <img src="/src/assets/projects/dbm-bi-day.webp" alt="DBM BI: daily summary" width="1200" height="535" loading="lazy" />
+              </button>
+              <figcaption data-i18n="bi.fig2">fig. 02 · daily summary</figcaption>
+            </figure>
+            <figure>
+              <button class="shot" type="button" data-zoom>
+                <span class="shot-bar"><i></i><i></i><i></i><span>dbm · bi · /aberturas-e-perdas</span></span>
+                <img src="/src/assets/projects/dbm-bi-churn.webp" alt="DBM BI: customer activation and churn" width="1200" height="561" loading="lazy" />
+              </button>
+              <figcaption data-i18n="bi.fig3">fig. 03 · activation and churn</figcaption>
+            </figure>
+          </div>
         </article>
       </section>
     </main>

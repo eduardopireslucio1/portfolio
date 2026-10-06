@@ -10,7 +10,7 @@ $ ls ~/
 predialize/   post-construction platform for builders · angular · node microservices
 eventosxp/    white-label platform for sports events · react · nestjs · postgres
 ride/         road · time trial
-projects/     lucio troféus sysadmin (v1 → v2 refactor) · dbm bi
+projects/     eventosxp · lucio troféus sysadmin (v1 → v2 refactor) · dbm bi
 
 $ cat portfolio
 a few thousand bits arranged by three.js · npm i && npm run dev · press ~
