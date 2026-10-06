@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects · Eduardo Pires Lucio</title>
+    <meta name="description" content="Projects by Eduardo Pires Lucio: the SysAdmin for Lucio Troféus, rebuilt, and earlier work." />
+    <meta name="theme-color" content="#030304" />
+    <meta property="og:title" content="Projects · Eduardo Pires Lucio" />
+    <meta property="og:description" content="The SysAdmin for Lucio Troféus, rebuilt, and earlier work." />
+    <meta property="og:image" content="%VITE_SITE_URL%og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23030304'/%3E%3Ctext x='9' y='22' font-family='monospace' font-size='15' font-weight='700' text-anchor='middle' fill='%233b8cff'%3E0%3C/text%3E%3Ctext x='23' y='22' font-family='monospace' font-size='15' font-weight='700' text-anchor='middle' fill='%23ff7a2b'%3E1%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="page-projects">
+    <div class="grain" aria-hidden="true"></div>
+
+    <header class="top">
+      <a class="handle" href="./">~/eduardo<span class="caret">_</span></a>
+      <div class="top-right">
+        <nav aria-label="Pages">
+          <a href="./"><span class="n">←</span><span data-i18n="projects.back">home</span></a>
+        </nav>
+        <button class="lang-toggle" type="button" data-lang-toggle>
+          <span data-lang="en">EN</span><i>/</i><span data-lang="pt">PT</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="section reveal">
+        <header class="section-head">
+          <span class="idx">110</span>
+          <h2 data-scramble>ls ~/projects</h2>
+        </header>
+
+        <article class="project">
+          <div class="project-head">
+            <div>
+              <p class="kicker">
+                <span class="live warm"></span><span data-i18n="lucio.kicker">01 · refactor · 2025–26</span>
+              </p>
+              <h1 class="feature-name">SysAdmin · Lucio Troféus</h1>
+              <p class="feature-pitch" data-i18n="lucio.pitch">
+                Order management for a trophy and awards workshop, from quote to delivery.
+              </p>
+              <p class="refactor-note" data-i18n="lucio.note">
+                v2 is a full refactor of the SysAdmin from my previous portfolio: new stack, new interface, same shop.
+              </p>
+            </div>
+            <div>
+              <dl class="spec">
+                <div><dt>v1</dt><dd>2022–23 · Vue · PHP · Laravel · MySQL</dd></div>
+                <div><dt>v2</dt><dd>2025–26 · Angular 19 · NestJS · TypeORM · PostgreSQL</dd></div>
+              </dl>
+              <ul class="did">
+                <li data-i18n="lucio.did1">Production kanban by stage, an owner per stage and a productivity report by stage and person.</li>
+                <li data-i18n="lucio.did2">Order chat with mentions, real-time notifications and an AI assistant.</li>
+                <li data-i18n="lucio.did3">Pix charges, payments, expenses and a financial dashboard.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="evolution">
+            <figure>
+              <button class="shot shot-old" type="button" data-zoom>
+                <span class="shot-bar"><i></i><i></i><i></i><span>lucio v1 · /produtos</span></span>
+                <img src="/src/assets/projects/lucio-v1.webp" alt="Lucio v1: product list" width="1200" height="578" loading="lazy" />
+              </button>
+              <figcaption><b>v1</b> · 2022–23 · vue + laravel</figcaption>
+            </figure>
+            <span class="evolution-arrow" aria-hidden="true">→</span>
+            <figure>
+              <button class="shot" type="button" data-zoom>
+                <span class="shot-bar"><i></i><i></i><i></i><span>lucio v2 · /dashboard</span></span>
+                <img src="/src/assets/projects/lucio-dashboard.webp" alt="Lucio v2: dashboard" width="1600" height="1000" />
+              </button>
+              <figcaption><b>v2</b> · 2025–26 · angular + nestjs</figcaption>
+            </figure>
+          </div>
+
+          <div class="gallery">
+            <figure>
+              <button class="shot" type="button" data-zoom>
+                <span class="shot-bar"><i></i><i></i><i></i><span>/orders-kanban</span></span>
+                <img src="/src/assets/projects/lucio-kanban.webp" alt="Lucio v2: orders by production stage" width="1200" height="750" loading="lazy" />
+              </button>
+              <figcaption data-i18n="lucio.fig1">fig. 01 · orders by stage</figcaption>
+            </figure>
+            <figure>
+              <button class="shot" type="button" data-zoom>
+                <span class="shot-bar"><i></i><i></i><i></i><span>/order</span></span>
+                <img src="/src/assets/projects/lucio-assignees.webp" alt="Lucio v2: orders by assignee" width="1200" height="750" loading="lazy" />
+              </button>
+              <figcaption data-i18n="lucio.fig2">fig. 02 · by assignee</figcaption>
+            </figure>
+            <figure>
+              <button class="shot" type="button" data-zoom>
+                <span class="shot-bar"><i></i><i></i><i></i><span>/productivity-report</span></span>
+                <img src="/src/assets/projects/lucio-report.webp" alt="Lucio v2: productivity report" width="1200" height="750" loading="lazy" />
+              </button>
+              <figcaption data-i18n="lucio.fig3">fig. 03 · productivity</figcaption>
+            </figure>
+          </div>
+          <p class="shot-note" data-i18n="lucio.demo">v2 screens with demo data.</p>
+        </article>
+
+        <article class="project project-small">
+          <div>
+            <p class="kicker"><span class="live"></span><span data-i18n="bi.kicker">02 · grupo dbm · 2022–24</span></p>
+            <h2 class="project-title">Business Intelligence</h2>
+            <p class="feature-pitch" data-i18n="bi.pitch">
+              BI for DBM's clients: revenue, customer profile, churn and sales on interactive maps.
+            </p>
+            <dl class="spec">
+              <div><dt>stack</dt><dd>Angular · Node.js · TypeScript · PostgreSQL</dd></div>
+            </dl>
+          </div>
+          <figure>
+            <button class="shot" type="button" data-zoom>
+              <span class="shot-bar"><i></i><i></i><i></i><span>dbm · bi</span></span>
+              <img src="/src/assets/projects/dbm-bi.webp" alt="DBM BI: sales map" width="1200" height="614" loading="lazy" />
+            </button>
+          </figure>
+        </article>
+      </section>
+    </main>
+
+    <dialog class="viewer" data-viewer aria-label="Screenshot">
+      <img alt="" />
+    </dialog>
+
+    <footer class="foot">
+      <span>EOF</span>
+      <span data-year></span>
+    </footer>
+
+    <script type="module" src="/src/projects.js"></script>
+  </body>
+</html>

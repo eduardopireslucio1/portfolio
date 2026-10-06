@@ -1,412 +1,320 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eduardo Pires Lucio - Full Stack Developer</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script>document.documentElement.classList.add("js");</script>
-</head>
-<body>
-    <header>
-        <nav class="navbar">
-            <a href="#" class="nav-branding">&lt;Eduardo /&gt;</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eduardo Pires Lucio</title>
+    <meta name="description" content="Eduardo Pires Lucio, software engineer at Predialize and builder of EventosXP, a white-label platform for sports events." />
+    <meta name="theme-color" content="#030304" />
+    <meta property="og:title" content="Eduardo Pires Lucio" />
+    <meta property="og:description" content="Software engineer at Predialize, building EventosXP." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="%VITE_SITE_URL%og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23030304'/%3E%3Ctext x='9' y='22' font-family='monospace' font-size='15' font-weight='700' text-anchor='middle' fill='%233b8cff'%3E0%3C/text%3E%3Ctext x='23' y='22' font-family='monospace' font-size='15' font-weight='700' text-anchor='middle' fill='%23ff7a2b'%3E1%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <canvas id="scene" aria-hidden="true"></canvas>
+    <div class="grain" aria-hidden="true"></div>
 
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#hero" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#tech-stack" class="nav-link">Tech Stack</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#experience" class="nav-link">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact-me" class="nav-link">Contact</a>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+    <header class="top">
+      <a class="handle" href="#top">~/eduardo<span class="caret">_</span></a>
+      <div class="top-right">
+        <nav aria-label="Sections">
+          <a href="#about"><span class="n">01</span><span data-i18n="nav.about">about</span></a>
+          <a href="#predialize"><span class="n">10</span>predialize</a>
+          <a href="#eventosxp"><span class="n">11</span>eventosxp</a>
+          <a href="#ride"><span class="n">100</span><span data-i18n="nav.ride">ride</span></a>
+          <a href="#contact"><span class="n">101</span><span data-i18n="nav.contact">contact</span></a>
+          <a class="nav-page" href="projects.html"><span class="n">110</span><span data-i18n="nav.projects">projects</span> →</a>
         </nav>
+        <button class="term-toggle" type="button" data-term-toggle aria-label="Open terminal">&gt;_</button>
+        <button class="lang-toggle" type="button" data-lang-toggle>
+          <span data-lang="en">EN</span><i>/</i><span data-lang="pt">PT</span>
+        </button>
+      </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <p class="hero-greeting" data-anime="200" class="fadeInDown">Hi there, I'm</p>
-                <h1 data-anime="400" class="fadeInDown">Eduardo Pires Lucio</h1>
-                <h2 data-anime="600" class="fadeInDown">Full Stack Developer</h2>
-                <p class="hero-subtitle" data-anime="800" class="fadeInDown">NodeJs | NestJS | TypeScript | Angular | MongoDB | PostgreSQL</p>
-                <div class="hero-cta" data-anime="1000" class="fadeInUp">
-                    <a href="#contact-me" class="btn-primary">Get In Touch</a>
-                    <a href="img/CV-Eduardo-PT.pdf" target="_blank" class="btn-secondary">Download CV</a>
-                </div>
-            </div>
-            <div class="hero-image" data-anime="800" class="fadeInRight">
-                <div class="image-wrapper">
-                    <img src="img/Eduardo4.png" alt="Eduardo Pires Lucio">
-                </div>
-            </div>
+    <main>
+      <section class="hero" id="top">
+        <div class="hero-text">
+          <p class="prompt"><span data-prompt data-i18n="hero.decoding">&gt; decoding identity</span><span class="caret">_</span></p>
+          <h1 data-name><span>Eduardo</span><span>Pires Lucio</span></h1>
+          <p class="role" data-i18n="hero.role">Software Engineer at Predialize · building EventosXP</p>
+          <p class="binary" data-binary aria-hidden="true"></p>
         </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2 class="section-title" data-anime="400" class="fadeInDown">About Me</h2>
-            <div class="about-content">
-                <div class="about-text" data-anime="600" class="fadeInLeft">
-                    <p>I'm a <strong>Software Developer and Analyst</strong> with a degree in Systems Analysis and Development from FACEC/UMFG College, and <strong>four years of professional experience</strong> in Information Technology.</p>
-                    <p>I am committed to continuous learning and have focused on enhancing my skills in technologies such as <strong>NodeJS, TypeScript, Angular, MongoDB</strong>, among others. I am always seeking new challenges that allow me to expand my knowledge and make a meaningful impact, collaborating closely with teams to develop innovative and effective solutions.</p>
-                    <p>Currently working as a <strong>Full Stack Developer at PREDIALIZE</strong>, I specialize in developing new system features, creating APIs, fixing bugs, implementing automated tests, conducting code reviews, and managing code versioning with Git.</p>
-                </div>
-                <div class="about-stats" data-anime="800" class="fadeInRight">
-                    <div class="stat-card">
-                        <h3>4+</h3>
-                        <p>Years Experience</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3>10+</h3>
-                        <p>Technologies</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3>100+</h3>
-                        <p>Projects Completed</p>
-                    </div>
-                </div>
-            </div>
+        <div class="hero-meta" aria-hidden="true">
+          <span>[ <b data-bits>0</b> bits ]</span>
+          <span><span data-light data-i18n="light.day">daylight</span> · <span data-clock>--:--</span></span>
+          <span class="scroll" data-i18n="hero.scroll">scroll ↓</span>
         </div>
-    </section>
-    <!-- Tech Stack Section -->
-    <section id="tech-stack">
-        <div class="container">
-            <h2 class="section-title" data-anime="400" class="fadeInDown">Current Tech Stack</h2>
-            <p class="section-subtitle" data-anime="600" class="fadeInDown">Technologies I'm currently working with</p>
+      </section>
 
-            <div class="tech-grid-featured">
-                <div class="tech-card featured" data-anime="600" class="fadeInUp">
-                    <div class="tech-icon">
-                        <img src="img/node.png" alt="NodeJS">
-                    </div>
-                    <h3>Node.js</h3>
-                    <p>Runtime Environment</p>
-                </div>
-                <div class="tech-card featured" data-anime="700" class="fadeInUp">
-                    <div class="tech-icon">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zm0 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10zm-1-17v10l8-5-8-5z"/>
-                        </svg>
-                    </div>
-                    <h3>NestJS</h3>
-                    <p>Backend Framework</p>
-                </div>
-                <div class="tech-card featured" data-anime="800" class="fadeInUp">
-                    <div class="tech-icon">
-                        <img src="img/typescript.png" alt="TypeScript">
-                    </div>
-                    <h3>TypeScript</h3>
-                    <p>Programming Language</p>
-                </div>
-                <div class="tech-card featured" data-anime="900" class="fadeInUp">
-                    <div class="tech-icon">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M9.93 12.645h4.134L11.996 7.74l-2.066 4.905zm7.81 8.588l1.313-3.105H21l-2.062-4.902-3.96 8.007zM11.996.782L.011 21.608h23.969L11.996.782z"/>
-                        </svg>
-                    </div>
-                    <h3>Angular</h3>
-                    <p>Frontend Framework</p>
-                </div>
-                <div class="tech-card featured" data-anime="1000" class="fadeInUp">
-                    <div class="tech-icon">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M17.193 9.555c-1.264-5.58-4.252-7.414-4.573-8.115-.28-.394-.53-.954-.735-1.44-.036.495-.055.685-.523 1.184-.723.566-4.438 3.682-4.74 10.02-.282 5.912 4.27 9.435 4.888 9.884l.07.05A73.49 73.49 0 0111.91 24h.481c.114-1.032.284-2.056.51-3.07.417-.296.604-.463.85-.693a11.342 11.342 0 003.639-8.464c.01-.814-.103-1.662-.197-2.218zm-5.336 8.195s0-8.291.275-8.29c.213 0 .49 10.695.49 10.695-.381-.045-.765-1.76-.765-2.405z"/>
-                        </svg>
-                    </div>
-                    <h3>MongoDB</h3>
-                    <p>NoSQL Database</p>
-                </div>
-                <div class="tech-card featured" data-anime="1100" class="fadeInUp">
-                    <div class="tech-icon">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M23.5594 14.7228a.5269.5269 0 00-.0563-.1191c-.139-.2632-.4768-.3418-.7399-.1777l-7.4768 4.6037a.5271.5271 0 00-.2061.2959.5284.5284 0 00-.0299.1794v5.5569c0 .2342.1531.4409.3752.5061a.5276.5276 0 00.5807-.1857l7.4768-9.1188c.0812-.0994.1232-.2236.1232-.3518v-.0687c0-.0269-.0037-.0537-.0093-.0802l.0024.0001zm-1.1382.4489l-5.9081 7.2079V17.338l5.9081-3.5344v1.3743zm-5.0739-1.7639a.5269.5269 0 00-.0563-.1191c-.139-.2632-.4768-.3418-.7399-.1777l-7.4768 4.6037a.5271.5271 0 00-.2061.2959.5284.5284 0 00-.0299.1794v5.5569c0 .2342.1531.4409.3752.5061a.5276.5276 0 00.5807-.1857l7.4768-9.1188c.0812-.0994.1232-.2236.1232-.3518v-.0687c0-.0269-.0037-.0537-.0093-.0802l.0024.0001zm-1.1382.4489l-5.9081 7.2079V17.338l5.9081-3.5344v1.3743zM23.5594 9.2228a.5269.5269 0 00-.0563-.1191c-.139-.2632-.4768-.3418-.7399-.1777l-7.4768 4.6037a.5271.5271 0 00-.2061.2959.5284.5284 0 00-.0299.1794v5.5569c0 .2342.1531.4409.3752.5061a.5276.5276 0 00.5807-.1857l7.4768-9.1188c.0812-.0994.1232-.2236.1232-.3518v-.0687c0-.0269-.0037-.0537-.0093-.0802l.0024.0001zm-1.1382.4489l-5.9081 7.2079v-5.0394l5.9081-3.5344v1.3659z"/>
-                        </svg>
-                    </div>
-                    <h3>PostgreSQL</h3>
-                    <p>SQL Database</p>
-                </div>
-            </div>
-
-            <h3 class="tech-category-title" data-anime="800" class="fadeInDown">Additional Skills</h3>
-            <div class="tech-grid">
-                <div class="tech-card-small" data-anime="900" class="fadeInUp">
-                    <img src="img/logo-javascript.png" alt="JavaScript">
-                    <span>JavaScript</span>
-                </div>
-                <div class="tech-card-small" data-anime="950" class="fadeInUp">
-                    <img src="img/git.png" alt="Git">
-                    <span>Git</span>
-                </div>
-                <div class="tech-card-small" data-anime="1000" class="fadeInUp">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M13.5.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 4 10.62 4 14c0 4.42 3.58 8 8 8s8-3.58 8-8C20 8.61 17.41 3.8 13.5.67zM11.71 19c-1.78 0-3.22-1.4-3.22-3.14 0-1.62 1.05-2.76 2.81-3.12 1.77-.36 3.6-1.21 4.62-2.58.39 1.29.59 2.65.59 4.04 0 2.65-2.15 4.8-4.8 4.8z"/>
-                    </svg>
-                    <span>Docker</span>
-                </div>
-                <div class="tech-card-small" data-anime="1050" class="fadeInUp">
-                    <img src="img/aws.png" alt="AWS">
-                    <span>AWS</span>
-                </div>
-                <div class="tech-card-small" data-anime="1100" class="fadeInUp">
-                    <img src="img/redis.png" alt="Redis">
-                    <span>Redis</span>
-                </div>
-                <div class="tech-card-small" data-anime="1150" class="fadeInUp">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"/>
-                    </svg>
-                    <span>Python</span>
-                </div>
-                <div class="tech-card-small" data-anime="1200" class="fadeInUp">
-                    <img src="img/vue.png" alt="Vue">
-                    <span>Vue.js</span>
-                </div>
-                <div class="tech-card-small" data-anime="1250" class="fadeInUp">
-                    <img src="img/php.png" alt="PHP">
-                    <span>PHP</span>
-                </div>
-                <div class="tech-card-small" data-anime="1300" class="fadeInUp">
-                    <img src="img/laravel.png" alt="Laravel">
-                    <span>Laravel</span>
-                </div>
-                <div class="tech-card-small" data-anime="1350" class="fadeInUp">
-                    <img src="img/linux.png" alt="Linux">
-                    <span>Linux</span>
-                </div>
-            </div>
+      <section class="section reveal" id="about">
+        <header class="section-head">
+          <span class="idx">01</span>
+          <h2 data-scramble>whoami</h2>
+        </header>
+        <div class="about">
+          <p class="lead" data-i18n="about.bio">
+            I'm a software engineer at Predialize, working on the platform Brazilian builders use after handing over the
+            keys. On my own I build EventosXP, a white-label platform for sports events, and lately AI agents and AI
+            workflows. I work across the stack with
+            TypeScript, Angular, React and NestJS, guided by Clean Architecture and Domain-Driven Design.
+          </p>
+          <div>
+            <dl class="stats">
+              <div><dt data-i18n="about.repos">public repos</dt><dd data-stat="repos">--</dd></div>
+              <div><dt data-i18n="about.followers">followers</dt><dd data-stat="followers">--</dd></div>
+              <div><dt data-i18n="about.since">on github since</dt><dd data-stat="since">--</dd></div>
+            </dl>
+            <div class="langs" data-langs></div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Experience Section -->
-    <section id="experience">
-        <div class="container">
-            <h2 class="section-title" data-anime="400" class="fadeInDown">Professional Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item" data-anime="600" class="fadeInLeft">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">February 2024 - Present</div>
-                        <h3>Full Stack Developer</h3>
-                        <h4>PREDIALIZE - Gestão do Pós-obra</h4>
-                        <p class="location">Florianópolis, Santa Catarina, Brasil</p>
-                        <ul class="timeline-description">
-                            <li>Developing new system features and APIs</li>
-                            <li>Implementing automated tests and code reviews</li>
-                            <li>Managing code versioning with Git</li>
-                            <li>Working with modern technologies: NodeJS, NestJS, TypeScript, Angular</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item" data-anime="700" class="fadeInLeft">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">June 2022 - February 2024</div>
-                        <h3>Full Stack Developer</h3>
-                        <h4>Grupo DBM de Tecnologia</h4>
-                        <p class="location">Cianorte, Paraná, Brazil</p>
-                        <ul class="timeline-description">
-                            <li>Developed new system features and RESTful APIs</li>
-                            <li>Fixed bugs and implemented automated tests</li>
-                            <li>Conducted code reviews and pair programming sessions</li>
-                            <li>Managed code versioning using Git and GitFlow</li>
-                            <li>Collaborated with cross-functional teams</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item" data-anime="800" class="fadeInLeft">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">January 2022 - June 2022</div>
-                        <h3>Support Analyst</h3>
-                        <h4>Grupo DBM de Tecnologia</h4>
-                        <p class="location">Paraná, Brasil</p>
-                        <ul class="timeline-description">
-                            <li>Provided technical system support to clients</li>
-                            <li>Performed API testing using Postman</li>
-                            <li>Configured business rules and system settings</li>
-                            <li>Managed customer service via Octadesk platform</li>
-                            <li>Created tutorials and documentation for system features</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item" data-anime="900" class="fadeInLeft">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">June 2021 - January 2022</div>
-                        <h3>Internship - Developer</h3>
-                        <h4>Grupo DBM de Tecnologia</h4>
-                        <p class="location">Cianorte, Paraná, Brasil</p>
-                    </div>
-                </div>
-            </div>
+      <section class="section reveal" id="predialize">
+        <header class="section-head">
+          <span class="idx">10</span>
+          <h2 data-scramble>./predialize</h2>
+        </header>
+        <div class="pdz-stage" data-pdz-stage aria-hidden="true"></div>
+        <div class="work">
+          <div>
+            <p class="kicker"><span class="live violet"></span><span data-i18n="pdz.kicker">day job · since 2024</span></p>
+            <h3 class="feature-name">Predialize</h3>
+            <p class="feature-pitch" data-i18n="pdz.pitch">
+              Post-construction platform for Brazilian builders: guides, maintenance, warranties and service tickets,
+              after the keys are handed over.
+            </p>
+            <ul class="did">
+              <li data-i18n="pdz.did1">Redesign of 8 web apps around shared components and workflows.</li>
+              <li data-i18n="pdz.did2">Shared features across products: lead capture, support navigation, account management.</li>
+              <li data-i18n="pdz.did3">Legacy modules modernized; critical bugs fixed and covered by regression tests.</li>
+            </ul>
+            <dl class="spec">
+              <div><dt data-i18n="pdz.roleLabel">role</dt><dd data-i18n="pdz.role">Software Engineer</dd></div>
+              <div><dt>stack</dt><dd>Angular · TypeScript · RxJS · Tailwind</dd></div>
+            </dl>
+            <a class="feature-link violet" href="https://predialize.com.br/" target="_blank" rel="noopener">predialize.com.br ↗</a>
+          </div>
+          <figure class="arch">
+            <figcaption data-i18n="pdz.arch">architecture</figcaption>
+            <dl class="arch-grid">
+              <div>
+                <dt data-i18n="pdz.fe">front ends · Angular</dt>
+                <dd data-scramble data-bin="1000">8</dd>
+              </div>
+              <div>
+                <dt data-i18n="pdz.ms">microservices · Node.js + TS</dt>
+                <dd data-scramble data-bin="1011">11</dd>
+              </div>
+              <div>
+                <dt data-i18n="pdz.jobs">background jobs</dt>
+                <dd data-scramble data-bin="0011">3</dd>
+              </div>
+              <div>
+                <dt>API gateway</dt>
+                <dd data-scramble data-bin="0001">1</dd>
+              </div>
+            </dl>
+            <p class="arch-more" data-i18n="pdz.more">real-time chat · Socket.io · MongoDB</p>
+          </figure>
         </div>
-    </section>
+      </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="container">
-            <h2 class="section-title" data-anime="400" class="fadeInDown">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card" data-anime="600" class="fadeInUp">
-                    <div class="project-images">
-                        <img src="img/luciotrofeus.png" alt="SysAdmin - Lucio Troféus" class="project-main-img">
-                        <div class="project-thumbnails">
-                            <img src="img/luciotrofeus-2.png" alt="SysAdmin Screenshot 2">
-                            <img src="img/luciotrofeus-3.png" alt="SysAdmin Screenshot 3">
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>SysAdmin - Lucio Troféus</h3>
-                        <p>A comprehensive system for controlling orders, customers, payments, deliveries and various types of reports. The system is currently in production for Lucio Trofeus e Brindes, streamlining their entire business operations.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Vue.js</span>
-                            <span class="tech-tag">PHP</span>
-                            <span class="tech-tag">Laravel</span>
-                            <span class="tech-tag">MySQL</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-anime="700" class="fadeInUp">
-                    <div class="project-images">
-                        <img src="img/dbmbi-1.png" alt="Business Intelligence" class="project-main-img">
-                        <div class="project-thumbnails">
-                            <img src="img/dbmbi-2.png" alt="BI Screenshot 2">
-                            <img src="img/dbmbi-3.png" alt="BI Screenshot 3">
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Business Intelligence System</h3>
-                        <p>A highly sophisticated Business Intelligence (BI) system that enables companies to gain valuable insights through comprehensive data analysis. Features include turnover evaluation, customer profiling, KPI tracking, interactive maps, and advanced analytics capabilities.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">TypeScript</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">Angular</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                        </div>
-                    </div>
-                </div>
+      <section class="section reveal" id="eventosxp">
+        <header class="section-head">
+          <span class="idx">11</span>
+          <h2 data-scramble>./eventosxp</h2>
+        </header>
+        <article class="feature">
+          <div class="feature-stage" data-logo-stage aria-hidden="true"></div>
+          <div class="feature-text">
+            <p class="kicker"><span class="live"></span><span data-i18n="xp.kicker">now building</span></p>
+            <h3 class="feature-name">EventosXP</h3>
+            <p class="feature-pitch" data-i18n="xp.pitch">A white-label platform for sports events. The organizer's brand up front, EventosXP running the operation.</p>
+            <p class="feature-desc" data-i18n="xp.desc">
+              Each organizer gets a registration site of its own, with its name, domain, colors and sponsors.
+              Athletes find the race, register and pay by Pix or card in a single flow. Behind the start line, one
+              panel handles participants, payments, categories, batches and check-in.
+            </p>
+            <dl class="spec">
+              <div><dt data-i18n="xp.modelLabel">model</dt><dd data-i18n="xp.model">white-label · own domain · no monthly fee</dd></div>
+              <div><dt data-i18n="xp.sportsLabel">sports</dt><dd data-i18n="xp.sports">running · cycling · MTB · triathlon</dd></div>
+              <div><dt>stack</dt><dd>React · TypeScript · NestJS · PostgreSQL</dd></div>
+              <div><dt>design</dt><dd>Clean Architecture · DDD</dd></div>
+            </dl>
+            <p class="cases-label" data-i18n="xp.cases">running live on</p>
+            <ul class="cases">
+              <li>
+                <a href="https://inscricoes.velhooesteeventos.com/" target="_blank" rel="noopener">
+                  <span class="case-name">Velho Oeste</span>
+                  <span class="case-meta" data-i18n="xp.case1">road running · cycling · duathlon</span>
+                  <span class="case-url">inscricoes.velhooesteeventos.com ↗</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.copacianorte.com.br/" target="_blank" rel="noopener">
+                  <span class="case-name">Copa Cianorte</span>
+                  <span class="case-meta" data-i18n="xp.case2">cycling</span>
+                  <span class="case-url">copacianorte.com.br ↗</span>
+                </a>
+              </li>
+            </ul>
+            <div class="feature-links">
+              <a class="feature-link" href="https://www.eventosxp.com.br/" target="_blank" rel="noopener">eventosxp.com.br ↗</a>
+              <a class="feature-link quiet" href="https://app.eventosxp.com.br/eventos" target="_blank" rel="noopener" data-i18n="xp.browse">browse events ↗</a>
             </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="section reveal" id="ride">
+        <header class="section-head">
+          <span class="idx">100</span>
+          <h2 data-scramble>./ride</h2>
+        </header>
+        <div class="ride">
+          <div class="ride-stage" data-ride-a aria-hidden="true">
+            <span class="ride-fig" data-i18n="ride.fig1">fig. 01 · road</span>
+          </div>
+          <div class="ride-text">
+            <p class="kicker"><span class="live warm"></span><span data-i18n="ride.kicker">off the keyboard</span></p>
+            <h3 class="feature-name" data-i18n="ride.title">I ride.</h3>
+            <p class="feature-pitch" data-i18n="ride.pitch">I'm a cyclist. I train and race, on the road and against the clock.</p>
+            <p class="feature-desc" data-i18n="ride.desc">
+              Racing puts me on the athlete's side of the start line, and that view shapes how EventosXP is built.
+            </p>
+          </div>
         </div>
-    </section>
-    <!-- Contact Section -->
-    <section id="contact-me">
-        <div class="container">
-            <h2 class="section-title" data-anime="400" class="fadeInDown">Get In Touch</h2>
-            <p class="section-subtitle" data-anime="600" class="fadeInDown">Let's discuss your next project or opportunity</p>
-
-            <div class="contact-content">
-                <div class="contact-info" data-anime="700" class="fadeInLeft">
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                            </svg>
-                        </div>
-                        <h4>Email</h4>
-                        <a href="mailto:eduardopireslucioo@gmail.com">eduardopireslucioo@gmail.com</a>
-                    </div>
-
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
-                            </svg>
-                        </div>
-                        <h4>Phone</h4>
-                        <a href="tel:+5544998163466">+55 (44) 99816-3466</a>
-                    </div>
-
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-                                <circle cx="12" cy="10" r="3"/>
-                            </svg>
-                        </div>
-                        <h4>Location</h4>
-                        <p>Cianorte, Paraná, Brasil</p>
-                    </div>
-
-                    <div class="social-links">
-                        <h4>Connect with me</h4>
-                        <div class="social-icons">
-                            <a href="https://github.com/eduardopireslucio1" target="_blank" aria-label="GitHub">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                            </a>
-                            <a href="https://www.linkedin.com/in/eduardopireslucio/" target="_blank" aria-label="LinkedIn">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                                </svg>
-                            </a>
-                            <a href="https://www.instagram.com/eduardopireslucio/" target="_blank" aria-label="Instagram">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <form class="contact-form" action="https://formsubmit.co/eduardopireslucioo@gmail.com" method="POST" data-anime="800" class="fadeInRight">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="subject" placeholder="Subject" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn-primary">Send Message</button>
-                </form>
-            </div>
+        <div class="ride ride-flip">
+          <div class="ride-stage" data-ride-b aria-hidden="true">
+            <span class="ride-fig" data-i18n="ride.fig2">fig. 02 · time trial</span>
+          </div>
+          <div class="ride-text">
+            <p class="race-no" aria-label="Race number 047" data-i18n-aria="ride.raceNo">047</p>
+            <p class="race-bits" aria-hidden="true">00101111</p>
+            <p class="feature-desc" data-i18n="ride.data">
+              Off the bike, the rides become data: a side project pulls my activities from the Strava API and
+              analyzes them with Python.
+            </p>
+            <dl class="spec">
+              <div><dt data-i18n="ride.ridesLabel">rides</dt><dd data-i18n="ride.rides">road · time trial</dd></div>
+              <div><dt data-i18n="ride.dataLabel">data</dt><dd>Strava API · Python</dd></div>
+            </dl>
+            <a
+              class="feature-link quiet"
+              href="https://github.com/eduardopireslucio1/data-analytics-strava"
+              target="_blank"
+              rel="noopener"
+              data-i18n="ride.link"
+              >ride data ↗</a
+            >
+          </div>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2025 Eduardo Pires Lucio. All rights reserved.</p>
-                <p class="footer-tagline">Built with passion and code</p>
-            </div>
+        <div class="ride ride-route" data-strava hidden>
+          <div class="ride-stage route-stage" data-route-stage aria-hidden="true">
+            <span class="ride-fig" data-i18n="ride.fig3">fig. 03 · last ride</span>
+          </div>
+          <div class="ride-text">
+            <p class="kicker">
+              <span class="live strava"></span><span data-i18n="strava.kicker">last ride · strava</span>
+              <span class="strava-date" data-strava-date></span>
+            </p>
+            <dl class="ride-stats">
+              <div><dt data-i18n="strava.distance">distance</dt><dd data-strava-km>--</dd></div>
+              <div><dt data-i18n="strava.elevation">elevation</dt><dd data-strava-elev>--</dd></div>
+              <div><dt data-i18n="strava.time">moving time</dt><dd data-strava-time>--</dd></div>
+              <div><dt data-i18n="strava.speed">avg speed</dt><dd data-strava-speed>--</dd></div>
+            </dl>
+            <p class="strava-year">
+              <span data-i18n="strava.year">this year</span>: <b data-ytd-km>--</b> km · <b data-ytd-elev>--</b> m ↑ ·
+              <b data-ytd-rides>--</b> <span data-i18n="strava.rides">rides</span>
+            </p>
+            <a class="feature-link strava" href="https://www.strava.com/athletes/3400462" target="_blank" rel="noopener" data-strava-link
+              >strava ↗</a
+            >
+          </div>
         </div>
+        <div class="cal-block" data-calendar hidden>
+          <p class="kicker">
+            <span class="live strava"></span><span data-cal-year></span> ·
+            <span data-i18n="cal.title">the year in bits</span>
+          </p>
+          <dl class="cal-stats">
+            <div><dt data-i18n="cal.days">days ridden</dt><dd data-cal-days>--</dd></div>
+            <div><dt data-i18n="cal.streak">longest streak · days</dt><dd data-cal-streak>--</dd></div>
+            <div><dt data-i18n="cal.month">best month</dt><dd data-cal-month>--</dd></div>
+            <div><dt data-i18n="cal.biggest">biggest day</dt><dd data-cal-biggest>--</dd></div>
+          </dl>
+          <div class="cal-scroll">
+            <div class="cal" data-cal role="img"></div>
+          </div>
+          <div class="cal-foot">
+            <span class="cal-status" data-cal-status></span>
+            <span class="cal-legend" aria-hidden="true">
+              <span data-i18n="cal.less">less</span>
+              <i class="l0">0</i><i class="l1">1</i><i class="l2">1</i><i class="l3">1</i><i class="l4">1</i>
+              <span data-i18n="cal.more">more</span>
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal" id="contact">
+        <header class="section-head">
+          <span class="idx">101</span>
+          <h2 data-scramble>ping</h2>
+        </header>
+        <div class="contact">
+          <div>
+            <p class="big"><span data-i18n="contact.l1">Let's build something</span><br /><span data-i18n="contact.l2">worth decoding.</span></p>
+            <ul class="links" data-links></ul>
+          </div>
+          <div class="hand-stage" data-hand-stage aria-hidden="true">
+            <span class="ride-fig">06.30.98</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="alti" data-alti aria-hidden="true">
+      <div class="alti-head"><span data-alti-section></span><span data-alti-note></span></div>
+      <svg viewBox="0 0 200 44" preserveAspectRatio="none">
+        <defs>
+          <clipPath id="alti-done"><rect data-alti-clip x="0" y="0" width="0" height="44" /></clipPath>
+          <linearGradient id="alti-fill" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#ff7a2b" stop-opacity="0.45" />
+            <stop offset="1" stop-color="#ff7a2b" stop-opacity="0" />
+          </linearGradient>
+        </defs>
+        <g data-alti-ticks></g>
+        <path class="alti-line" data-alti-line />
+        <g clip-path="url(#alti-done)">
+          <path class="alti-area" data-alti-area fill="url(#alti-fill)" />
+          <path class="alti-line done" data-alti-line-done />
+        </g>
+        <circle class="alti-dot" data-alti-dot r="2.6" />
+      </svg>
+    </div>
+
+    <footer class="foot">
+      <span>EOF · <span data-i18n="foot.hint">press ~ to open the terminal</span></span>
+      <span data-year></span>
     </footer>
 
-    <script src="js/simple-anime.js"></script>
-    <script src="script.js"></script>
-</body>
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>
